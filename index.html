@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hossein Kawianifard – E-Commerce & KI-Automatisierung</title>
+<meta name="description" content="Hossein Kawianifard – Kaufmann im E-Commerce (IHK) aus Düsseldorf. Lokale KI, über 100 getestete Sprachmodelle, Benchmarking, RAG und KI-Automatisierung für E-Commerce.">
+<meta property="og:title" content="Hossein Kawianifard – E-Commerce & KI-Automatisierung">
+<meta property="og:description" content="Kaufmann im E-Commerce (IHK) · über 100 lokale Sprachmodelle getestet & gebenchmarkt · Düsseldorf">
+<meta property="og:image" content="assets/portrait.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f5f0; --surface:#ffffff; --ink:#14223b; --muted:#5b6578; --line:#e3ded2;
+  --navy:#14223b; --gold:#b8901f; --gold-soft:#f3ead2; --chip:#eef1f6;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1626; --surface:#152035; --ink:#e8ecf3; --muted:#a3adbf; --line:#26334d;
+    --navy:#0a1120; --gold:#d6ad3e; --gold-soft:#2a2615; --chip:#1d2a44;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1626; --surface:#152035; --ink:#e8ecf3; --muted:#a3adbf; --line:#26334d;
+  --navy:#0a1120; --gold:#d6ad3e; --gold-soft:#2a2615; --chip:#1d2a44;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;font-size:16px}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+nav .brand{font-family:Fraunces,serif;font-weight:700;text-decoration:none;font-size:18px;white-space:nowrap}
+nav .brand span{color:var(--gold)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:500}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+@media(max-width:760px){nav ul{display:none}}
+
+/* Hero */
+.hero{background:var(--navy);color:#fff;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:72px}
+.eyebrow{color:var(--gold);font-weight:600;letter-spacing:.14em;font-size:12.5px;text-transform:uppercase}
+.hero h1{font-family:Fraunces,serif;font-size:clamp(36px,5.4vw,58px);line-height:1.05;margin:14px 0 18px;font-weight:700}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{font-size:18px;color:#cfd6e3;max-width:560px;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.gold{background:var(--gold);color:#14223b}
+.btn.ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.portrait{position:relative;justify-self:center}
+.portrait img{width:min(320px,70vw);aspect-ratio:3/4;object-fit:cover;border-radius:22px;display:block;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.portrait::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:2px solid var(--gold);border-radius:22px;z-index:-1}
+.portrait{z-index:0}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-top:48px;padding-bottom:56px}.portrait{order:-1}}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:-36px;position:relative;box-shadow:0 12px 30px rgba(20,34,59,.08)}
+.stat{background:var(--surface);padding:22px 20px}
+.stat b{display:block;font-family:Fraunces,serif;font-size:32px;line-height:1.1;color:var(--gold)}
+.stat span{font-size:14px;color:var(--muted)}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+section{padding:76px 0 8px}
+h2{font-family:Fraunces,serif;font-size:clamp(28px,3.6vw,38px);margin:0 0 8px;line-height:1.15}
+.sub{color:var(--muted);margin:0 0 32px;max-width:680px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:860px){.grid2,.grid3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card h3{margin:0 0 6px;font-size:19px}
+.card .meta{font-size:13px;color:var(--gold);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+.card ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+.card li{margin:5px 0}
+.card p{color:var(--muted);margin:8px 0 0}
+.feature{grid-column:1/-1;background:linear-gradient(135deg,var(--surface),var(--gold-soft));}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:14px;font-weight:500}
+.chip.learn{border-style:dashed;color:var(--muted)}
+.skillgroup h3{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 12px}
+
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+td b{color:var(--ink)}
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:18px}
+
+.timeline{position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl{position:relative;margin-bottom:26px}
+.tl::before{content:"";position:absolute;left:-26px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--bg)}
+.tl .when{font-size:13px;color:var(--gold);font-weight:600}
+.tl h3{margin:2px 0 2px;font-size:18px}
+.tl .where{color:var(--muted);font-size:14.5px}
+.tl p{margin:6px 0 0;color:var(--muted)}
+
+.contact{background:var(--navy);color:#fff;border-radius:24px;padding:48px 36px;margin:76px 0 0;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+.contact h2{color:#fff}
+.contact p{color:#cfd6e3;margin:0}
+@media(max-width:760px){.contact{grid-template-columns:1fr;padding:36px 22px}}
+footer{padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
+.theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 12px;font-size:13px;cursor:pointer}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">H<span>.</span> Kawianifard</a>
+    <ul>
+      <li><a href="#ueber-mich">Über mich</a></li>
+      <li><a href="#ki-labor">KI-Labor</a></li>
+      <li><a href="#projekte">Projekte</a></li>
+      <li><a href="#kompetenzen">Kompetenzen</a></li>
+      <li><a href="#werdegang">Werdegang</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <button class="theme" id="themeBtn" aria-label="Hell/Dunkel umschalten">◐</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Kaufmann im E-Commerce (IHK) · Düsseldorf</div>
+      <h1>E-Commerce trifft <em>Künstliche Intelligenz</em>.</h1>
+      <p class="lead">Ich bin Hossein Kawianifard. Ich verbinde E-Commerce-Know-how mit praktischer Erfahrung in lokaler KI: über 100 Sprachmodelle auf eigener Hardware betrieben, gebenchmarkt und zu automatisierten Workflows verknüpft.</p>
+      <div class="btns">
+        <a class="btn gold" href="assets/KI-Portfolio_Hossein_Kawianifard.pdf" target="_blank" rel="noopener">KI-Portfolio ansehen (PDF)</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/hossein-kawianifard" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+    <div class="portrait"><img src="assets/portrait.jpg" alt="Porträt von Hossein Kawianifard" width="420" height="560"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="stats" aria-label="Kennzahlen">
+    <div class="stat"><b>100+</b><span>Sprachmodelle & Varianten getestet</span></div>
+    <div class="stat"><b>≈ 70 Mrd.</b><span>Parameter – größtes lokal betriebenes Modell</span></div>
+    <div class="stat"><b>13–24</b><span>Token/s auf integrierter AMD-Grafik</span></div>
+    <div class="stat"><b>IHK</b><span>Abschluss Kaufmann im E-Commerce 2026</span></div>
+  </div>
+
+  <section id="ueber-mich">
+    <h2>Über mich</h2>
+    <p class="sub">Zertifizierter Kaufmann im E-Commerce mit IT-Hintergrund – und einer echten Leidenschaft für KI und Automatisierung.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>Was mich antreibt</h3>
+        <p>Ich will verstehen, wie Dinge funktionieren – und sie dann besser machen. Deshalb betreibe ich Sprachmodelle nicht nur in der Cloud, sondern offline auf eigener Hardware: datenschutzfreundlich, messbar und mit klarem Blick auf Qualität, Tempo und Kosten.</p>
+      </div>
+      <div class="card">
+        <h3>Wie ich arbeite</h3>
+        <p>Sehr genau im Detail – und dann bewusst aus der Vogelperspektive auf das große Ganze. Aus mehreren Jahren IT-Administration und als Geschäftsführer eines Betriebs bringe ich systematische Fehleranalyse, Verantwortung und Kundenorientierung mit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ki-labor">
+    <h2>Mein KI-Labor</h2>
+    <p class="sub">Eigenprojekt, laufend: lokale Infrastruktur auf AMD Ryzen 7 8845HS, Radeon 780M (iGPU) und Ryzen AI NPU.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Modell (Auswahl)</th><th>Typ / Größe</th><th>Einsatz & Ergebnis</th></tr></thead>
+        <tbody>
+          <tr><td><b>Qwen (≈ 70 Mrd.)</b></td><td>großes dichtes Modell</td><td>Grenztest: Qualität vs. Tempo und Speicher auf lokaler Hardware</td></tr>
+          <tr><td><b>Qwen3.6-35B-A3B</b></td><td>MoE · Vision</td><td>Coding-Assistent in VS Code (Continue) über lokale OpenAI-API</td></tr>
+          <tr><td><b>gpt-oss-20b</b></td><td>20 Mrd. · Q4_K_M / IQ4_NL</td><td>Alltagsmodell – ca. 24 Token/s; Quantisierungen verglichen</td></tr>
+          <tr><td><b>Qwen3.5-9B</b></td><td>9 Mrd.</td><td>ca. 14,5 Token/s, erste Antwort in ≈ 0,8 s; Flash-Attention verglichen</td></tr>
+          <tr><td><b>Gemma 4</b></td><td>Vision</td><td>Bild- und Textverständnis</td></tr>
+          <tr><td><b>GLM-4.7-Flash</b></td><td>MoE</td><td>Inkompatibilität mit Vulkan/AMD analysiert → begründet verworfen</td></tr>
+          <tr><td><b>Whisper · Kokoro</b></td><td>Sprache ↔ Text</td><td>lokale Transkription und Sprachausgabe</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="projekte">
+    <h2>Projekte</h2>
+    <p class="sub">Was ich gebaut habe – und was ich daraus mitbringe.</p>
+    <div class="grid2">
+      <div class="card feature">
+        <div class="meta">KI & Automatisierung · laufend</div>
+        <h3>Lokale KI-Infrastruktur & LLM-Engineering</h3>
+        <ul>
+          <li><b>Inferenz-Stack:</b> AMD Lemonade Server, AMD GAIA, llama.cpp (Vulkan), NPU/ONNX, Ollama, Open WebUI</li>
+          <li><b>Benchmarking:</b> Token/s, Zeit bis zum ersten Token, Speicherbedarf – Quantisierung, Kontextgröße und Hardware abgestimmt</li>
+          <li><b>RAG & Suche:</b> Wissenssuche auf eigenen Dokumenten (Embeddings + Chroma) und Websuche für lokale Modelle</li>
+          <li><b>Hybrid-Architektur:</b> schnelles Kleinmodell → lokales Hauptmodell → Cloud-Fallback (LiteLLM)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="meta">E-Commerce · 09/2024 – 02/2025</div>
+        <h3>Markteinführung „Redrum“</h3>
+        <p>Big Chewan Clothing GmbH, Neuss – eigenverantwortliche Online-Kampagne für eine Streetwear-Marke.</p>
+        <ul>
+          <li>Zielgruppenanalyse & Segmentierung</li>
+          <li>Landingpage mit Newsletter (WordPress)</li>
+          <li>Instagram- & TikTok-Content</li>
+          <li>DSGVO-konformes E-Mail-Marketing mit Rabattcodes</li>
+          <li>Erfolgsmessung & Reporting</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="meta">Entwicklung · KI-gestützt</div>
+        <h3>KI-Coding-Umgebung</h3>
+        <p>VS Code mit Continue an einen lokalen Lemonade-Server angebunden – ein Coding-Assistent, der komplett offline läuft und über eine OpenAI-kompatible Schnittstelle arbeitet.</p>
+        <ul>
+          <li>Modellwahl nach Aufgabe</li>
+          <li>Prompt Engineering & Bewertung der Ergebnisse</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="kompetenzen">
+    <h2>Kompetenzen</h2>
+    <p class="sub">Gestrichelt = aktuell in Vertiefung.</p>
+    <div class="grid3">
+      <div class="card skillgroup">
+        <h3>KI & Automatisierung</h3>
+        <div class="chips">
+          <span class="chip">Lokale LLMs</span><span class="chip">LLM-Benchmarking</span><span class="chip">RAG</span><span class="chip">Prompt Engineering</span><span class="chip">APIs & Webhooks</span><span class="chip">LiteLLM</span><span class="chip">Ollama</span><span class="chip">Open WebUI</span><span class="chip learn">n8n</span><span class="chip learn">Make</span>
+        </div>
+      </div>
+      <div class="card skillgroup">
+        <h3>E-Commerce & Marketing</h3>
+        <div class="chips">
+          <span class="chip">Shopify</span><span class="chip">WooCommerce</span><span class="chip">WordPress</span><span class="chip">Amazon Seller Central</span><span class="chip">Produktdaten</span><span class="chip">SEO</span><span class="chip">E-Mail-Marketing</span><span class="chip">Social Media</span><span class="chip">Canva</span><span class="chip learn">GEO</span><span class="chip learn">Local SEO</span>
+        </div>
+      </div>
+      <div class="card skillgroup">
+        <h3>IT & Sprachen</h3>
+        <div class="chips">
+          <span class="chip">Netzwerk- & Systemadministration</span><span class="chip">Windows Server</span><span class="chip">DSGVO</span><span class="chip">Excel</span><span class="chip">Deutsch C1</span><span class="chip">Englisch B2</span><span class="chip">Persisch</span><span class="chip">Kurdisch</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="werdegang">
+    <h2>Werdegang</h2>
+    <p class="sub">Von der IT-Administration über die Unternehmensführung zum E-Commerce und zur KI.</p>
+    <div class="timeline">
+      <div class="tl"><div class="when">01/2023 – 06/2026</div><h3>Kaufmann im E-Commerce (IHK)</h3><div class="where">IAL – Institut für angewandte Logistik / IHK Düsseldorf</div></div>
+      <div class="tl"><div class="when">09/2024 – 02/2025</div><h3>E-Commerce Marketing – Projekt „Redrum“</h3><div class="where">Big Chewan Clothing GmbH, Neuss</div></div>
+      <div class="tl"><div class="when">2021 – 2022</div><h3>IT-Vorkurs (Modulares IT-Center)</h3><div class="where">IT-Akademie Dr. Heuer GmbH, Bochum</div></div>
+      <div class="tl"><div class="when">2 Jahre</div><h3>Ehrenamtlicher Lehrer</h3><div class="where">Unterricht für ukrainische Kinder</div></div>
+      <div class="tl"><div class="when">2013 – 2015</div><h3>Geschäftsführer & Betriebsleiter</h3><div class="where">Kfz-Servicebetrieb, Iran</div><p>Leitung von bis zu 6 Mitarbeitenden, Prozessoptimierung, Kundenmanagement, Budgetverantwortung.</p></div>
+      <div class="tl"><div class="when">2007 – 2012</div><h3>Systemadministrator</h3><div class="where">Iran</div><p>Aufbau und Wartung von Netzwerk- und Telekommunikationsinfrastruktur, IT-Support.</p></div>
+    </div>
+  </section>
+
+  <div class="contact" id="kontakt">
+    <div>
+      <h2>Lassen Sie uns sprechen.</h2>
+      <p>Ich suche eine Position im E-Commerce, Online-Marketing, Produktdatenmanagement oder in der KI-Automatisierung – gerne remote oder hybrid. Mein KI-Setup zeige ich Ihnen gern live.</p>
+    </div>
+    <div class="btns">
+      <a class="btn gold" href="mailto:hossein.kawianifard@gmail.com">E-Mail schreiben</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/hossein-kawianifard" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © <span id="y">2026</span> Hossein Kawianifard · Düsseldorf
+</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+(function(){
+  const root=document.documentElement,btn=document.getElementById('themeBtn');
+  try{const t=localStorage.getItem('theme');if(t)root.setAttribute('data-theme',t);}catch(e){}
+  btn.addEventListener('click',()=>{
+    const dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    const next=dark?'light':'dark';root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
